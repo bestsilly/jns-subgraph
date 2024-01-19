@@ -10,9 +10,9 @@ dataSources:
     name: ENSRegistry
     network: mainnet
     source:
-      address: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+      address: "0x1FE51DdbA60F3Ec64DA002E5ccBc46e597049E24"
       abi: EnsRegistry
-      startBlock: 9380380
+      startBlock: 15769305
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -38,9 +38,9 @@ dataSources:
     name: ENSRegistryOld
     network: mainnet
     source:
-      address: "0x314159265dd8dbb310642f98f50c066173c1259b"
+      address: "0x6D320CDC0fCec0d4CBBda19490b510B6B7CED286"
       abi: EnsRegistry
-      startBlock: 3327417
+      startBlock: 15769298
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -66,7 +66,9 @@ dataSources:
     name: Resolver
     network: mainnet
     source:
+      address: "0x9200d994379e85fb1C2994DB79ff4826A36bDBC3"
       abi: Resolver
+      startBlock: 15769432
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -114,9 +116,9 @@ dataSources:
     name: BaseRegistrar
     network: mainnet
     source:
-      address: "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+      address: "0xb5caF25Cbb6760Ca6E815113e84108Fc1AC2ED41"
       abi: BaseRegistrar
-      startBlock: 9380410
+      startBlock: 15769357
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -141,9 +143,9 @@ dataSources:
     name: EthRegistrarControllerOld
     network: mainnet
     source:
-      address: "0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5"
+      address: "0x82C1b8A24E6e19629CE8Fa5a397d352FDBD7cAc2"
       abi: EthRegistrarControllerOld
-      startBlock: 9380471
+      startBlock: 15769403
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -165,9 +167,9 @@ dataSources:
     name: EthRegistrarController
     network: mainnet
     source:
-      address: "0x253553366Da8546fC250F225fe3d25d0C782303b"
+      address: "0x4Dd6dc791F79bc85766649FC3e42059c564703BD"
       abi: EthRegistrarController
-      startBlock: 16925618
+      startBlock: 15769413
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -189,9 +191,9 @@ dataSources:
     name: NameWrapper
     network: mainnet
     source:
-      address: "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401"
+      address: "0xc57de38dBcB35473773f84A553F2Ab5fC23B4653"
       abi: NameWrapper
-      startBlock: 16925608
+      startBlock: 15769388
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
