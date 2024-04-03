@@ -30,6 +30,16 @@
         "internalType": "contract INameWrapper",
         "name": "_nameWrapper",
         "type": "address"
+      },
+      {
+        "internalType": "contract ENS",
+        "name": "_ens",
+        "type": "address"
+      },
+      {
+        "internalType": "contract JNSAdminContract",
+        "name": "_jnsAdmin",
+        "type": "address"
       }
     ],
     "stateMutability": "nonpayable",
@@ -95,8 +105,24 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "name": "NameNotWhitelisted",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "ResolverRequiredWhenDataSupplied",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ResolverRequiredWhenReverseRecord",
     "type": "error"
   },
   {
@@ -151,6 +177,37 @@
       }
     ],
     "name": "NameRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "label",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "id",
+        "type": "string"
+      }
+    ],
+    "name": "NameRegisteredWithId",
     "type": "event"
   },
   {
@@ -262,6 +319,19 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "jnsAdmin",
+    "outputs": [
+      {
+        "internalType": "contract JNSAdminContract",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -453,6 +523,59 @@
       }
     ],
     "name": "register",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_secret",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "_resolver",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "_data",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bool",
+        "name": "_reverseRecord",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_ownerControlledFuses",
+        "type": "uint16"
+      },
+      {
+        "internalType": "string",
+        "name": "_id",
+        "type": "string"
+      }
+    ],
+    "name": "registerWithId",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
