@@ -54,12 +54,6 @@ export function handleNameRegistered(event: NameRegisteredEvent): void {
   domain.registrant = account.id;
   domain.expiryDate = event.params.expires.plus(GRACE_PERIOD_SECONDS);
 
-  let labelName = ens.nameByHash(label.toHexString());
-  if (labelName != null) {
-    domain.labelName = labelName;
-    domain.name = labelName! + ".jfin";
-    registration.labelName = labelName;
-  }
   domain.save();
   registration.save();
 
